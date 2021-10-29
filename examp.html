@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <script src="main.js"></script>
+    <style>
+      button {
+        background-color: #16ece2;
+        border-radius: 20px;
+        color: rgb(8, 6, 6);
+        padding: 10px 30px;
+        text-align: center;
+        
+        font-size: 10px;
+        cursor: pointer;
+      }
+      p{
+        color: hsl(0, 85%, 43%);
+      }
+    </style>
+    <script>
+      function addNumbers() {
+        var number;
+        var result = "";
+
+        number = Number(document.getElementById("number").value);
+        
+
+        range = Number(document.getElementById("range").value);
+
+        for(var i = 1; i<= range; i++){
+          result = result + "<p>"+number + "*" + i + "=" + number * i+"</p>";
+          
+        document.getElementById("result").innerHTML = result;
+        }
+
+      }
+    </script>
+  </head>
+  <body>
+    
+    Enter the number : <input id="number" />
+
+    <br><br>
+    Enter the range: 
+    <input id="range" />
+<br>
+<br>
+    <button onclick="addNumbers()">Print Multiplication table</button>
+    <div id="result">
+        </div>
+  </body>
+</html>
